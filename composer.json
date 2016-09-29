@@ -1,0 +1,36 @@
+{
+    "name": "fwolf/base-converter",
+    "description": "Convert number (string format) between base 2 and 62",
+    "type": "library",
+    "keywords": [
+        "base16",
+        "base36",
+        "base62",
+        "converter",
+        "number"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fwolf",
+            "email": "fwolf.aide+base-converter.php@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0",
+        "ext-bcmath": "*"
+    },
+    "suggest": {
+        "ext-gmp": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Fwolf\\Util\\BaseConverter\\": "src/BaseConverter/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "FwolfTest\\Util\\BaseConverter\\": "tests/BaseConverter/"
+        }
+    }
+}
