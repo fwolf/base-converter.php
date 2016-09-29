@@ -86,6 +86,21 @@ $arrayFlip = function () {
 };
 
 
+$loopAssign = function() {
+    $dict = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+    $map = [];
+    $reverseMap = [];
+    for ($i = 0; $i < 62; $i++) {
+        $char = $dict{$i};
+        $map[] = $char;
+        $reverseMap[$char] = $i;
+    }
+
+    return true || $map || $reverseMap;
+};
+
+
 $maxLoop = 100000;
 $time1 = $_SERVER["REQUEST_TIME_FLOAT"];
 
@@ -104,15 +119,23 @@ for ($i = 0; $i < $maxLoop; $i++) {
 }
 $time4 = microtime(true);
 
+for ($i = 0; $i < $maxLoop; $i++) {
+    $loopAssign();
+}
+$time5 = microtime(true);
+
 
 echo "Direct array assign: " . ($time2 - $time1) . PHP_EOL;
 echo "  Use array_merge(): " . ($time3 - $time2) . PHP_EOL;
 echo "   Use array_flip(): " . ($time4 - $time3) . PHP_EOL;
+echo "  Loop array assign: " . ($time5 - $time4) . PHP_EOL;
 
 /**
  * Example result:
- *
- * Direct array assign: 0.98733711242676
- *   Use array_merge(): 1.7664220333099
- *    Use array_flip(): 1.3577589988708
+
+Direct array assign: 0.94509100914001
+  Use array_merge(): 1.7523620128632
+   Use array_flip(): 1.3521640300751
+  Loop array assign: 3.1361529827118
+
  */
