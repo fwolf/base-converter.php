@@ -9,7 +9,7 @@ use Fwolf\Base\Singleton\SingleInstanceTrait;
  * @copyright   Copyright 2006-2016 Fwolf
  * @license     http://opensource.org/licenses/MIT MIT
  */
-class BaseConverter
+class BaseConverter implements BaseConverterInterface
 {
     use SingleInstanceTrait;
 
@@ -230,12 +230,8 @@ class BaseConverter
 
 
     /**
-     * Convert number string base, 2 to 62
+     * {@inheritdoc}
      *
-     * @param   string $number
-     * @param   int    $fromBase
-     * @param   int    $toBase
-     * @return  string
      * @throws  \InvalidArgumentException
      * @throws  \Exception
      */
