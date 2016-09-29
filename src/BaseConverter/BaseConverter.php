@@ -1,6 +1,8 @@
 <?php
 namespace Fwolf\Util\BaseConverter;
 
+use Fwolf\Base\Singleton\SingleInstanceTrait;
+
 /**
  * BC Math or GMP extension maybe not loaded.
  *
@@ -9,6 +11,9 @@ namespace Fwolf\Util\BaseConverter;
  */
 class BaseConverter
 {
+    use SingleInstanceTrait;
+
+
     /**
      * Number to char
      *

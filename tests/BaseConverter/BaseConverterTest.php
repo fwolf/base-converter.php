@@ -62,7 +62,7 @@ class BaseConverterTest extends PHPUnitTestCase
      */
     public function testConvertWithInvalidArgument()
     {
-        $converter = $this->buildMock();
+        $converter = BaseConverter::getInstance();
 
         $converter->convert(0, 1, 100);
     }

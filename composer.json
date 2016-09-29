@@ -18,7 +18,8 @@
     ],
     "require": {
         "php": ">=5.5.0",
-        "ext-bcmath": "*"
+        "ext-bcmath": "*",
+        "fwolf/singleton": "~1.0"
     },
     "suggest": {
         "ext-gmp": "*"
