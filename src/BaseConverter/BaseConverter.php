@@ -4,7 +4,7 @@ namespace Fwolf\Util\BaseConverter;
 use Fwolf\Base\Singleton\SingleInstanceTrait;
 
 /**
- * BC Math or GMP extension maybe not loaded.
+ * Notice: BC Math or GMP extension maybe not loaded, so test cannot cover all.
  *
  * @copyright   Copyright 2006-2016 Fwolf
  * @license     http://opensource.org/licenses/MIT MIT
